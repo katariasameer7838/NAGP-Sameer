@@ -1,0 +1,37 @@
+<h1 class="main-heading" align='center'>Product Description</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <div col-md-8>
+                    <strong>{{productData.ProductName}}</strong>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4"> 
+                        <img style="width: 400px; height: 300px;" [src]="productData.Image"/>
+                    </div>
+                    <div class="col-md-4"> 
+                        <p>{{productData.ProductName}}</p>
+                        <strong>Description</strong><p>{{productData.Description}}</p>
+                        <strong>Tags</strong><p>{{productData.Tags}}</p>
+                        <strong>Category</strong><p>{{productData.Category}}</p>
+                        <strong>Returnable</strong><p>{{productData.Returnable}}</p>
+
+                    </div>
+                    <div class="col-md-4"> 
+                        <strong>INR {{productData.Price}}</strong>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <button style="float: right;" class="btn-success" (click)='AddToCart(productData)'>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

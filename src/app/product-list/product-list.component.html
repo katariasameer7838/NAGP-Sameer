@@ -1,0 +1,28 @@
+<h1 class="main-heading" align='center'>Products</h1>
+
+<div *ngFor='let product of productList'>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div col-md-8>
+                        <strong>{{product.ProductName}}</strong>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4"> 
+                            <img style="width: 200px; height: 150px;" [src]="product.Image"/>
+                        </div>
+                        <div class="col-md-4"> 
+                            <strong>INR {{product.Price}}</strong>
+                        </div>
+                        <div class="col-md-4"> 
+                            <button class="btn-success" (click)='moveToDescPage(product.id)'>See More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
